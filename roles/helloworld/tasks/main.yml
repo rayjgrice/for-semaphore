@@ -8,11 +8,9 @@
   debug:
     msg: "Task two"
 
-- name: "执行脚本测试"
-  shell: echo 123
-  register: result
-  failed_when: false
-- name: "检查结果"
-  fail:
-    msg: "{{result.stdout_lines}}"
-  failed_when: result.rc != 0
+- name: df
+  shell: df -h
+  register: shell_result
+
+- debug:
+    var: shell_result.stdout_lines
