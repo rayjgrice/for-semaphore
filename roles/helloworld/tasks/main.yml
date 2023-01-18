@@ -7,3 +7,9 @@
 - name: Task 2
   debug:
     msg: "Task two"
+
+- name: Exec single shell command
+  shell: echo "1"
+  
+- name: Exec multi commands using &&
+  shell: echo "1" && echo "2"
