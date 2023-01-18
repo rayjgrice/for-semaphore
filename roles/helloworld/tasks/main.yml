@@ -9,7 +9,7 @@
     msg: "Task two"
 
 - name: df
-  shell: df -h
+  shell: echo 123
   register: shell_result
 
 - debug:
